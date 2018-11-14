@@ -2,19 +2,22 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img  =  cv2.imread('/Imagens/dog.jpg' , 0) 
-#hist  =  cv2.calcHist ([ img ], [ 0 ], none , [ 256 ], [ 0 , 256 ])
-"""
-"""
+img  =  cv2.imread('training_set/dogs/dog.1.jpg') 
+cv2.imshow('img colorida',img)
 
-#Usando Mat
-#plt.hist(img.ravel(),256,[0,256])
-#plt.show()
+#separando os canais
+canais = cv2.split(img)
+color = ('b', 'g', 'r')
 
-color = ('b','g','r')
-for i,col in enumerate(color):
-    histr = cv2.calcHist([img],[i],None,[256],[0,256])
-    plt.plot(histr,color = col)
+plt.figure()
+plt.title('Hitograma Colorido')
+plt.xlabel('Intesidade')
+plt.ylabel('Nº de pixels')
+
+for (canal,cor) in zip(canais,color):
+    hist = cv2.calcHist([canal],[0],None,[256],[0,256])
+    plt.plot(hist, cor = cor)
     plt.xlim([0,256])
-    plt.show()
+
+plt.show()
 

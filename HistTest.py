@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from scipy.misc import imread
 
 #pegando somente uma das cores da imagem
-img = cv2.imread('training_set/dogs/dog.1.jpg',0)
+img = cv2.imread('training_set/cats/cat.19.jpg',0)
 plt.figure()
 plt.imshow(img)
 
@@ -17,7 +17,7 @@ plt.xlim([0,256])
 #plt.ylim([400,800])
 plt.show()
 
-thrs, dst  = cv2.threshold(img, 150, 256, cv2.THRESH_TRUNC)
+thrs, dst  = cv2.threshold(img, 100, 256, cv2.THRESH_TRUNC)
 plt.imshow(dst,'gray')
 plt.show()
 
