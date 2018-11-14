@@ -23,7 +23,7 @@ plt.show()
 equ = cv2.equalizeHist(img)
 
 # juntando as imagens
-res = np.hstack((img_ori, equ))
+res = np.hstack((img, equ))
 
 cv2.imshow('as duas img', res)
 k = cv2.waitKey(0)
