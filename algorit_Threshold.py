@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 # from matplotlib import pyplot as plt
 
-img = cv2.imread('training_set/dogs/dog.8.jpg',0)
+img = cv2.imread('training_set/dogs/dog.14.jpg',0)
 # plt.figure()
 # plt.imshow(img)
 
@@ -40,9 +40,12 @@ cv2.imwrite('img_nova.jpg', img_nova)
 
 img_nova = cv2.imread('img_nova.jpg',0)
 
+# juntando as imagens
+asDuas = np.hstack((img,img_nova))
 
-cv2.imshow('img Original',img)
-cv2.imshow('Threshold',img_nova)
+cv2.imshow('as duas',asDuas)
+#cv2.imshow('img Original',img)
+#cv2.imshow('Threshold',img_nova)
 
 k = cv2.waitKey(0)
 
