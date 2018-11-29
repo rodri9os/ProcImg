@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 # from matplotlib import pyplot as plt
 
-img = cv2.imread('training_set/dogs/dog.8.jpg',0)
+img = cv2.imread('training_set/dogs/dog.14.jpg',0)
 # plt.figure()
 # plt.imshow(img)
 
