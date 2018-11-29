@@ -40,9 +40,12 @@ cv2.imwrite('img_nova.jpg', img_nova)
 
 img_nova = cv2.imread('img_nova.jpg',0)
 
+# juntando as imagens
+asDuas = np.hstack((img,img_nova))
 
-cv2.imshow('img Original',img)
-cv2.imshow('Threshold',img_nova)
+cv2.imshow('as duas',asDuas)
+#cv2.imshow('img Original',img)
+#cv2.imshow('Threshold',img_nova)
 
 k = cv2.waitKey(0)
 
