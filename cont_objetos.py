@@ -15,15 +15,18 @@ img_bi = bn.binarizacao(img,114) # preto e branco
 
 #k = cv2.waitKey(0)
 
-vizinho = bn.vizinho(img_bi,356,66)
+#vizinho = bn.vizinho(img_bi,0,0)
+
+#print(vizinho)
+
+#i = 356
+#j = 66
 
 
-i = 356
-j = 66
+#for i in range(lin):
+    
+for j in range(col):
+    if img_bi[0][j] == 0:
+        vizinho = bn.vizinho(img_bi,0,j)
+        print(j, ' ' ,vizinho)
 
-
-for i in range(lin):
-    for j in range(col):
-        if img_bi[i,j] == 1: 
-            print("i = %d, j = %d" % (i,j))
-            break

@@ -84,6 +84,7 @@ def vizinho (img,i,j):
         vizinho[2] = None
         vizinho[3] = None
         vizinho[4] = None
+        vizinho['p'] = img[i,j]
         vizinho[5] = img[i,j+1]
         vizinho[6] = None
         vizinho[7] = img[i+1,j]
@@ -94,17 +95,19 @@ def vizinho (img,i,j):
         vizinho[2] = None
         vizinho[3] = None
         vizinho[4] = img[i,j-1]
+        vizinho['p'] = img[i,j]
         vizinho[5] = None
         vizinho[6] = img[i+1,j-1]
         vizinho[7] = img[i+1,j]
         vizinho[8] = None
 
 
-    if i == 0 :
+    elif i == 0 :
         vizinho[1] = None
         vizinho[2] = None
         vizinho[3] = None
         vizinho[4] = img[i,j-1]
+        vizinho['p'] = img[i,j]
         vizinho[5] = img[i,j+1]
         vizinho[6] = img[i+1,j-1]
         vizinho[7] = img[i+1,j]
@@ -116,6 +119,7 @@ def vizinho (img,i,j):
         vizinho[2] = img[i-1,j]
         vizinho[3] = img[i-1,j+1]
         vizinho[4] = None
+        vizinho['p'] = img[i,j]
         vizinho[5] = img[i,j+1]
         vizinho[6] = None
         vizinho[7] = None
@@ -127,6 +131,7 @@ def vizinho (img,i,j):
         vizinho[2] = img[i-1,j]
         vizinho[3] = None
         vizinho[4] = img[i,j-1]
+        vizinho['p'] = img[i,j]
         vizinho[5] = None
         vizinho[6] = None
         vizinho[7] = None
@@ -137,6 +142,7 @@ def vizinho (img,i,j):
         vizinho[2] = img[i-1,j]
         vizinho[3] = img[i-1,j+1]
         vizinho[4] = img[i,j-1]
+        vizinho['p'] = img[i,j]
         vizinho[5] = img[i,j+1]
         vizinho[6] = None
         vizinho[7] = None
@@ -147,6 +153,7 @@ def vizinho (img,i,j):
         vizinho[2] = img[i-1,j]
         vizinho[3] = img[i-1,j+1]
         vizinho[4] = img[i,j-1]
+        vizinho['p'] = img[i,j]
         vizinho[5] = img[i,j+1]
         vizinho[6] = img[i+1,j-1]
         vizinho[7] = img[i+1,j]
