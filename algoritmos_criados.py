@@ -80,87 +80,99 @@ def vizinho (img,i,j):
 
 
     if i == 0 and j == 0:
-        vizinho[1] = None
-        vizinho[2] = None
-        vizinho[3] = None
-        vizinho[4] = None
-        vizinho['p'] = img[i,j]
-        vizinho[5] = img[i,j+1]
-        vizinho[6] = None
-        vizinho[7] = img[i+1,j]
-        vizinho[8] = img[i+1,j+1]
+        vizinho[str(i-1) +' ' + str(j-1)] = None
+        vizinho[str(i-1)+ ' ' +str(j)] = None
+        vizinho[str(i-1)+ ' ' +str(j+1)] = None
+        vizinho[str(i)+ ' ' +str(j-1)] = None
+        vizinho[str(i)+ ' ' +str(j)] = img[i,j]
+        vizinho[str(i)+ ' ' +str(j+1)] = img[i,j+1]
+        vizinho[str(i+1)+ ' ' +str(j-1)] = None
+        vizinho[str(i+1)+ ' ' +str(j)] = img[i+1,j]
+        vizinho[str(i+1)+ ' ' +str(j+1)] = img[i+1,j+1]
 
     elif i == 0 and j == col:
-        vizinho[1] = None
-        vizinho[2] = None
-        vizinho[3] = None
-        vizinho[4] = img[i,j-1]
-        vizinho['p'] = img[i,j]
-        vizinho[5] = None
-        vizinho[6] = img[i+1,j-1]
-        vizinho[7] = img[i+1,j]
-        vizinho[8] = None
+        vizinho[str(i-1) +' ' + str(j-1)] = None
+        vizinho[str(i-1)+ ' ' +str(j)] = None
+        vizinho[str(i-1)+ ' ' +str(j+1)] = None
+        vizinho[str(i)+ ' ' +str(j-1)] = img[i,j-1]
+        vizinho[str(i)+ ' ' +str(j)] = img[i,j]
+        vizinho[str(i)+ ' ' +str(j+1)] = None
+        vizinho[str(i+1)+ ' ' +str(j-1)] = img[i+1,j-1]
+        vizinho[str(i+1)+ ' ' +str(j)] = img[i+1,j]
+        vizinho[str(i+1)+ ' ' +str(j+1)] = None
 
 
     elif i == 0 :
-        vizinho[1] = None
-        vizinho[2] = None
-        vizinho[3] = None
-        vizinho[4] = img[i,j-1]
-        vizinho['p'] = img[i,j]
-        vizinho[5] = img[i,j+1]
-        vizinho[6] = img[i+1,j-1]
-        vizinho[7] = img[i+1,j]
-        vizinho[8] = img[i+1,j+1]
+        vizinho[str(i-1) +' ' + str(j-1)] = None
+        vizinho[str(i-1)+ ' ' +str(j)] = None
+        vizinho[str(i-1)+ ' ' +str(j+1)] = None
+        vizinho[str(i)+ ' ' +str(j-1)] = img[i,j-1]
+        vizinho[str(i)+ ' ' +str(j)] = img[i,j]
+        vizinho[str(i)+ ' ' +str(j+1)] = img[i,j+1]
+        vizinho[str(i+1)+ ' ' +str(j-1)] = img[i+1,j-1]
+        vizinho[str(i+1)+ ' ' +str(j)] = img[i+1,j]
+        vizinho[str(i+1)+ ' ' +str(j+1)] = img[i+1,j+1]
 
        
     elif i == lin and j == 0 :
-        vizinho[1] = None
-        vizinho[2] = img[i-1,j]
-        vizinho[3] = img[i-1,j+1]
-        vizinho[4] = None
-        vizinho['p'] = img[i,j]
-        vizinho[5] = img[i,j+1]
-        vizinho[6] = None
-        vizinho[7] = None
-        vizinho[8] = None
+        vizinho[str(i-1) +' ' + str(j-1)] = None
+        vizinho[str(i-1)+ ' ' +str(j)] = img[i-1,j]
+        vizinho[str(i-1)+ ' ' +str(j+1)] = img[i-1,j+1]
+        vizinho[str(i)+ ' ' +str(j-1)] = None
+        vizinho[str(i)+ ' ' +str(j)] = img[i,j]
+        vizinho[str(i)+ ' ' +str(j+1)] = img[i,j+1]
+        vizinho[str(i+1)+ ' ' +str(j-1)] = None
+        vizinho[str(i+1)+ ' ' +str(j)] = None
+        vizinho[str(i+1)+ ' ' +str(j+1)] = None
 
         
     elif i == lin and j == col:
-        vizinho[1] = img[i-1,j-1]
-        vizinho[2] = img[i-1,j]
-        vizinho[3] = None
-        vizinho[4] = img[i,j-1]
-        vizinho['p'] = img[i,j]
-        vizinho[5] = None
-        vizinho[6] = None
-        vizinho[7] = None
-        vizinho[8] = None
+        vizinho[str(i-1) +' ' + str(j-1)] = img[i-1,j-1]
+        vizinho[str(i-1)+ ' ' +str(j)] = img[i-1,j]
+        vizinho[str(i-1)+ ' ' +str(j+1)] = None
+        vizinho[str(i)+ ' ' +str(j-1)] = img[i,j-1]
+        vizinho[str(i)+ ' ' +str(j)] = img[i,j]
+        vizinho[str(i)+ ' ' +str(j+1)] = None
+        vizinho[str(i+1)+ ' ' +str(j-1)] = None
+        vizinho[str(i+1)+ ' ' +str(j)] = None
+        vizinho[str(i+1)+ ' ' +str(j+1)] = None
 
     elif j == col:
-        vizinho[1] = img[i-1,j-1]
-        vizinho[2] = img[i-1,j]
-        vizinho[3] = img[i-1,j+1]
-        vizinho[4] = img[i,j-1]
-        vizinho['p'] = img[i,j]
-        vizinho[5] = img[i,j+1]
-        vizinho[6] = None
-        vizinho[7] = None
-        vizinho[8] = None
+        vizinho[str(i-1) +' ' + str(j-1)] = img[i-1,j-1]
+        vizinho[str(i-1)+ ' ' +str(j)] = img[i-1,j]
+        vizinho[str(i-1)+ ' ' +str(j+1)] = img[i-1,j+1]
+        vizinho[str(i)+ ' ' +str(j-1)] = img[i,j-1]
+        vizinho[str(i)+ ' ' +str(j)] = img[i,j]
+        vizinho[str(i)+ ' ' +str(j+1)] = img[i,j+1]
+        vizinho[str(i+1)+ ' ' +str(j-1)] = None
+        vizinho[str(i+1)+ ' ' +str(j)] = None
+        vizinho[str(i+1)+ ' ' +str(j+1)] = None
         
     else:    
-        vizinho[1] = img[i-1,j-1]
-        vizinho[2] = img[i-1,j]
-        vizinho[3] = img[i-1,j+1]
-        vizinho[4] = img[i,j-1]
-        vizinho['p'] = img[i,j]
-        vizinho[5] = img[i,j+1]
-        vizinho[6] = img[i+1,j-1]
-        vizinho[7] = img[i+1,j]
-        vizinho[8] = img[i+1,j+1]
+        vizinho[str(i-1) +' ' + str(j-1)] = img[i-1,j-1]
+        vizinho[str(i-1)+ ' ' +str(j)] = img[i-1,j]
+        vizinho[str(i-1)+ ' ' +str(j+1)] = img[i-1,j+1]
+        vizinho[str(i)+ ' ' +str(j-1)] = img[i,j-1]
+        vizinho[str(i)+ ' ' +str(j)] = img[i,j]
+        vizinho[str(i)+ ' ' +str(j+1)] = img[i,j+1]
+        vizinho[str(i+1)+ ' ' +str(j-1)] = img[i+1,j-1]
+        vizinho[str(i+1)+ ' ' +str(j)] = img[i+1,j]
+        vizinho[str(i+1)+ ' ' +str(j+1)] = img[i+1,j+1]
         
     return vizinho
     
     
-    
+def vizinho0(img):
+    lista0 ={}
+    for i in range(3):
+        for j in range(3):
+            #if img_bi[i][j] == 0:
+            vizinhos = vizinho(img,i,j)
+            print(vizinhos[0])
+            for v in range(len(vizinhos)):
+                print(vizinhos[v])
+                print()
+
+            #print(i,j, ' ' ,vizinho)
+    return lista0
 

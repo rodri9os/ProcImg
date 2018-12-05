@@ -22,11 +22,14 @@ img_bi = bn.binarizacao(img,114) # preto e branco
 #i = 356
 #j = 66
 
+print(bn.vizinho0(img_bi))
 
-#for i in range(lin):
-    
-for j in range(col):
-    if img_bi[0][j] == 0:
-        vizinho = bn.vizinho(img_bi,0,j)
-        print(j, ' ' ,vizinho)
+"""
+for i in range(3):
+    for j in range(3):
+        if img_bi[i][j] == 0:
+            vizinho = bn.vizinho(img_bi,i,j)
+            print(i,j, ' ' ,vizinho)
+            print()
 
+"""
