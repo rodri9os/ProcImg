@@ -2,6 +2,11 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+'''
+Fazer o Contraste de uma imagem
+'''
+
+
 #img_ori = cv2.imread('training_set/dogs/dog.16.jpg',1)
 img = cv2.imread('training_set/dogs/dog.16.jpg',0)
 """

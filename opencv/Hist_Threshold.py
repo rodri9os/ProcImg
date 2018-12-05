@@ -3,15 +3,17 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.misc import imread
 
+'''
+Faz o histograma da imagem,
+e mostra o thresold
+'''
+
+
 #pegando somente uma das cores da imagem
-<<<<<<< HEAD
 img = cv2.imread('training_set/dogs/dog.6.jpg',0)
 #plt.plot([0:100],100, linestyle='-')  # solid
 #x = np.linspace(0, 163)
 #plt.plot([0 100], [0 100])
-=======
-img = cv2.imread('training_set/cats/cat.19.jpg',0)
->>>>>>> 0d453106a9c68a970238494a8236489b448ed651
 plt.figure()
 plt.imshow(img)
 
@@ -21,16 +23,13 @@ histr = cv2.calcHist([img],[0],None,[256],[0,256])
 plt.figure()
 plt.plot(histr,'b')
 plt.xlim([0,256])
-<<<<<<< HEAD
 plt.show()
 
 thrs, dst  = cv2.threshold(img, 100, 255, cv2.THRESH_TRUNC)
-=======
 #plt.ylim([400,800])
 plt.show()
 
 thrs, dst  = cv2.threshold(img, 100, 256, cv2.THRESH_TRUNC)
->>>>>>> 0d453106a9c68a970238494a8236489b448ed651
 plt.imshow(dst,'gray')
 plt.show()
 
