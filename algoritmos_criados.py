@@ -162,17 +162,20 @@ def vizinho (img,i,j):
     return vizinho
     
     
-def vizinho0(img):
-    lista0 ={}
-    for i in range(3):
+def vizinho0(img,lin):
+    lista0 = []
+    for i in range(lin-100):
         for j in range(3):
             #if img_bi[i][j] == 0:
             vizinhos = vizinho(img,i,j)
-            print(vizinhos[0])
-            for v in range(len(vizinhos)):
-                print(vizinhos[v])
-                print()
-
-            #print(i,j, ' ' ,vizinho)
+            #print(vizinhos)
+            for v in vizinhos:
+                # 'v' é só o ponto se quiser pegar o valor naquele ponto
+                # usa-se o nome do dicionário e a chave que é 'v'
+                # e verifica se ele é preto
+                if vizinhos[v] == 0: 
+                    lista0.append(v) # aqui adiciona os pontos 
+        
+                    
     return lista0
 
