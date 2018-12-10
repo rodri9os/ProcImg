@@ -22,7 +22,14 @@ img_bi = bn.binarizacao(img,114) # preto e branco
 #i = 356
 #j = 66
 
-print(bn.vizinho0(img_bi))
+lista = bn.vizinho0(img_bi,lin) # recebe a lista com pontos repetidos
+#lista = set(lista) # remove os repetidos e transforma em um dict
+
+lista = sorted(set(lista)) # ordena e remove os repetidos, continua sendo lista
+# como os pontos são strings, não será totalmente ordenado
+
+#lista= sorted(lista)
+print(lista)
 
 """
 for i in range(3):
