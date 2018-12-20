@@ -1,0 +1,9 @@
+# """
+# links..
+# https://medium.com/@lucashelal/detecção-e-contagem-da-área-de-objetos-em-uma-imagem-binária-440759a7e034
+# https://github.com/LucasHelal/Proc-Imagens/edit/master/Contar%20Objetos/contar_objetos.py
+#
+# creio q só roda pelo terminal..
+#
+# python3 test_contagem.py img.jpg
+# """
